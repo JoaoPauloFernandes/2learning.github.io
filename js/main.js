@@ -1,61 +1,48 @@
-jQuery(function($) {
 
-	//#main-slider
-	$(function(){
-		$('#main-slider.carousel').carousel({
-			interval: 8000
-		});
-	});
-
-	$( '.centered' ).each(function( e ) {
-		$(this).css('margin-top',  ($('#main-slider').height() - $(this).height())/2);
-	});
-
-	$(window).resize(function(){
-		$( '.centered' ).each(function( e ) {
-			$(this).css('margin-top',  ($('#main-slider').height() - $(this).height())/2);
-		});
-	});
-
-	//portfolio
-	$(window).load(function(){
-		$portfolio_selectors = $('.portfolio-filter >li>a');
-		if($portfolio_selectors!='undefined'){
-			$portfolio = $('.portfolio-items');
-			$portfolio.isotope({
-				itemSelector : 'li',
-				layoutMode : 'fitRows'
-			});
-			$portfolio_selectors.on('click', function(){
-				$portfolio_selectors.removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				$portfolio.isotope({ filter: selector });
-				return false;
-			});
-		}
-	});
-
-	//contact form
-	var form = $('.contact-form');
-	form.submit(function () {
-		$this = $(this);
-		$.post($(this).attr('action'), function(data) {
-			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
-		},'json');
-		return false;
-	});
-
-	//goto top
-	$('.gototop').click(function(event) {
-		event.preventDefault();
-		$('html, body').animate({
-			scrollTop: $("body").offset().top
-		}, 500);
-	});	
-
-	//Pretty Photo
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		social_tools: false
-	});	
+jQuery(window).bind('scroll', function (){
+  if (jQuery(window).scrollTop() > 900){
+    jQuery('#main-nav').addClass('navbar-fixed-top');
+  } else {
+    jQuery('#main-nav').removeClass('navbar-fixed-top');
+  }
 });
+
+jQuery(document).ready(function($) {
+  "use strict";
+  $('#main-nav .nav').onePageNav({
+    currentClass: 'active',
+    scrollOffset: 69,
+  });  
+});
+
+$(document).ready(function(){
+   
+  //.parallax(xPosition, speedFactor, outerHeight) options:
+  //xPosition - Horizontal position of the element
+  //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+  //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+  $('#top').parallax("50%", 0.4);
+  $('#testimonial').parallax("50%", 0.4);
+  $('#download').parallax("50%", 0.4);
+})
+
+
+$(document).ready(function() {
+      $(".owl-carousel").owlCarousel({
+        autoPlay: 3000,
+        items : 4,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3]
+      });
+
+    });
+
+    jQuery(function( $ ){
+          $('#download-app1').localScroll({
+            duration:1200
+          });
+           $('#download-app2').localScroll({
+            duration:1000
+          });
+        });
+
