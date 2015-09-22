@@ -148,12 +148,12 @@
                 </div> <!-- end .container> .header -->
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <div class="featured-item-img">
                             <img src="images/documents.png" alt="Materiais">
                         </div>
                     </div>
-                    <div class="col-md-8 feature-list">
+                    <div class="col-md-10 feature-list">
                         <div class="row">
                             <iframe src="https://drive.google.com/embeddedfolderview?id=0B3Eft3_S1PchSUFVS0g2am56Yms#grid"
                                     style="width: 100%; height: 250px; border: 0"></iframe>
@@ -179,12 +179,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <div class="featured-item-img">
                             <img src="images/activity.png" alt="Atividades">
                         </div>
                     </div>
-                    <div class="col-md-8 feature-list">
+                    <div class="col-md-10 feature-list">
                         <div class="row">
                             <iframe src="https://drive.google.com/embeddedfolderview?id=0B3Eft3_S1PchZERHRHpNTDh0RnM#grid"
                                     style="width: 100%; height: 250px; border: 0"></iframe>
@@ -280,6 +280,23 @@
                     </div> <!-- end .container > .header -->
 
                     <div class="row download-area">
+                        <div class="col-md-offset-2">
+                            <h2>Ambiente de Desenvolvimento</h2>
+                        </div>
+
+                        <div class="col-md-4 col-md-offset-2">
+                            <h4>Java SE - JDK</h4>
+                            <p>Kit de desenvolvimento Java Standard Edition fornecidos pela Oracle</p>
+
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html?ssSourceSiteId=otnpt" class="btn btn-default custom-btn download-btn">
+                                    <i class="fa fa-download"></i>
+                                    <div class="app-download">
+                                        <span>Baixar </span><strong>Instalador</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
                         <div class="col-md-4">
                             <h4>Android Studio</h4>
@@ -295,12 +312,19 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <h4>Genymotion</h4>
-                            <p>Emulador Android baseado no Virtual Box da Oracle</p>
+                    </div>
+
+                    <div class="row download-area">
+                        <div class="col-md-offset-2">
+                            <h2>Outros</h2>
+                        </div>
+
+                        <div class="col-md-4 col-md-offset-2">
+                            <h4>Java SE - JDK</h4>
+                            <p>Kit de desenvolvimento Java Standard Edition fornecidos pela Oracle</p>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <a href="https://www.genymotion.com/#!/download" class="btn btn-default custom-btn download-btn">
+                                <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html?ssSourceSiteId=otnpt" class="btn btn-default custom-btn download-btn">
                                     <i class="fa fa-download"></i>
                                     <div class="app-download">
                                         <span>Baixar </span><strong>Instalador</strong>
@@ -310,11 +334,11 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h4>Visual Studio Emulator for Android</h4>
-                            <p>Emulador Android baseado no Hyper-V da Microsoft</p>
+                            <h4>Android Studio</h4>
+                            <p>Ambiente de desenvolvimento integrado (IDE) ofical fornecida pelo Goole</p>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                <a href="https://www.visualstudio.com/en-us/materiais/msft-android-emulator-vs.aspx" class="btn btn-default custom-btn download-btn">
+                                <a href="https://developer.android.com/sdk/index.html" class="btn btn-default custom-btn download-btn">
                                     <i class="fa fa-download"></i>
                                     <div class="app-download">
                                         <span>Baixar </span><strong>Instalador</strong>
@@ -322,7 +346,6 @@
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 </div> <!-- end .container -->
             </div> <!-- end .download -->
@@ -413,7 +436,7 @@
     <script src="js/main.js"></script>
 
     <script>
-        jQuery(document).ready(function ($) {
+        jQuery(document).ready(function () {
             "use strict";
 
             jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({ social_tools: false });
